@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+   
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="text-center my-3">INFORMATION FORM</h1>
+        </div>
+      </div>
+
+
+        <form class="row">
+
+          <div class="col-lg-6">
+            <span>Present Address</span>
+            <div class="mb-3">
+              <label for="village" class="form-label">Village:</label>
+              <input type="text" class="form-control" id="pr_village" placeholder="Enter your village">
+            </div>
+            <div class="mb-3">
+              <label for="district" class="form-label">District</label>
+              <input type="text" class="form-control" id="pr_district" placeholder="Enter your district">
+            </div>
+          </div>
+
+           <div class="col-lg-6">
+            <span>Premanent Address <input type="checkbox" onclick="myFunction()" name="checkbox" id="check"> Same as present</span>
+            <div class="mb-3">
+              <label for="village" class="form-label">Village:</label>
+              <input type="text" class="form-control" id="pe_village" placeholder="Enter your village">
+            </div>
+            <div class="mb-3">
+              <label for="district" class="form-label">District</label>
+              <input type="text" class="form-control" id="pe_district" placeholder="Enter your district">
+            </div>
+          </div>
+
+        </form>
+     
+    </div>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      function myFunction(){
+        var check = document.getElementById('check')
+
+        var pr_village = document.getElementById('pr_village').value;
+        var pr_district = document.getElementById('pr_district').value;
+
+        if (check.checked == true) {
+           document.getElementById('pe_village').value =pr_village;
+           document.getElementById('pe_district').value =pr_district;
+        }
+        else{
+          document.getElementById('pe_village').value ='';
+           document.getElementById('pe_district').value ='';
+        }
+
+      }
+
+    </script>
+  </body>
+</html>
